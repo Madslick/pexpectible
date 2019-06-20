@@ -1,0 +1,513 @@
+switches:
+- &icx1
+  name: icx1
+  #SiteB-Dist2
+  ip_address: 10.176.4.30
+  console_ip: 10.176.14.232
+  console_port: 3001
+
+- &icx2
+  name: icx2
+  #SiteB-Dist1
+  #DC-Agg2
+  ip_address: 10.176.4.29
+  console_ip: 10.176.14.232
+  console_port: 3002
+
+- &icx3
+  name: icx3
+  #SiteB-Core
+  #DC-Dist2
+  ip_address: 10.176.4.28
+  console_ip: 10.176.14.232
+  console_port: 3003
+
+- &icx4
+  name: icx4
+  #SiteB-ISP
+  #ISPB
+  ip_address: 10.176.4.27
+  console_ip: 10.176.14.232
+  console_port: 3004
+
+- &icx5
+  name: icx5
+  #SiteB-IDF1
+  #Remote2-Switch
+  ip_address: 10.176.4.31
+  console_ip: 10.176.14.232
+  console_port: 3005
+
+- &icx6
+  name: icx6
+  #SiteB-IDF2-Act
+  #CallCenter-Dist2
+  ip_address: 10.176.4.32
+  console_ip: 10.176.14.232
+  console_port: 3006
+
+- &icx7
+  name: icx7
+  #SiteB-IDF2-Mem
+  #CallCenter-Access2
+  ip_address: 10.176.4.33
+  console_ip: 10.176.14.232
+  console_port: 3007
+
+- &icx8
+  name: icx8
+  #SiteA-Dist2
+  #DC-Agg1
+  ip_address: 10.176.4.23
+  console_ip: 10.176.14.232
+  console_port: 3008
+
+- &icx9
+  name: icx9
+  #SiteA-Dist1
+  #Border
+  ip_address: 10.176.4.22
+  console_ip: 10.176.14.232
+  console_port: 3009
+
+- &icx10
+  name: icx10
+  #SiteA-Core
+  #DC-Dist1
+  ip_address: 10.176.4.21
+  console_ip: 10.176.14.232
+  console_port: 3010
+
+- &icx11
+  name: icx11
+  #SiteA-ISP
+  #ISPA
+  ip_address: 10.176.4.20
+  console_ip: 10.176.14.232
+  console_port: 3011
+
+- &icx12
+  name: icx12
+  #SiteA-IDF1
+  #Remote1-Access
+  ip_address: 10.176.4.24
+  console_ip: 10.176.14.232
+  console_port: 3012
+
+- &icx13
+  name: icx13
+  #SiteA-IDF2-Act
+  #CallCenter-Access1
+  ip_address: 10.176.4.25
+  console_ip: 10.176.14.232
+  console_port: 3013
+
+- &icx14
+  name: icx14
+  #SiteA-IDF2-Mem
+  #CallCenter-Dist1
+  ip_address: 10.176.4.26
+  console_ip: 10.176.14.232
+  console_port: 3014
+
+- &icx15
+  name: icx15
+  #DC-Edge1
+  ip_address: 10.176.4.166
+  console_ip: 10.176.14.233
+  console_port: 3002
+
+- &icx16
+  name: icx16
+  #DC-Edge2
+  ip_address: 10.176.4.167
+  console_ip: 10.176.14.233
+  console_port: 3003
+
+- &icx17
+  name: icx17
+  #WAN1
+  #TBD
+  ip_address: 10.176.4.168
+  console_ip: 10.176.14.233
+  console_port: 3004
+
+- &icx18
+  name: icx18
+  #WAN2
+  #TBD
+  ip_address: 10.176.4.169
+  console_ip: 10.176.14.233
+  console_port: 3005
+
+- &icx19
+  name: icx19
+  #HotelA-Core
+  #Remote1-Router
+  ip_address: 10.176.4.150
+  console_ip: 10.176.14.231
+  console_port: 3001
+
+- &icx20
+  name: icx20
+  #HotelA-StackA-Act
+  #DC-Access1
+  ip_address: 10.176.4.151
+  console_ip: 10.176.14.231
+  console_port: 3002
+
+- &icx21
+  name: icx21
+  #HotelA-StackA-Sta
+  #DC-Access2
+  ip_address: 10.176.4.152
+  console_ip: 10.176.14.231
+  console_port: 3003
+
+- &icx22
+  name: icx22
+  #HotelA-StackA-Mem
+  #DC-Access3
+  ip_address: 10.176.4.153
+  console_ip: 10.176.14.231
+  console_port: 3004
+
+- &icx23
+  name: icx23
+  #HotelA-StackB-Act
+  #Corp1-Dist1
+  ip_address: 10.176.4.154
+  console_ip: 10.176.14.231
+  console_port: 3005
+
+- &icx24
+  name: icx24
+  #HotelA-StackB-Sta
+  #Corp1-Dist2
+  ip_address: 10.176.4.155
+  console_ip: 10.176.14.231
+  console_port: 3006
+
+- &icx25
+  name: icx25
+  #HotelA-StackC-Act
+  #Corp2-Dist1
+  ip_address: 10.176.4.156
+  console_ip: 10.176.14.231
+  console_port: 3007
+
+- &icx26
+  name: icx26
+  #HotelA-StackC-Sta
+  #Corp2-Dist2
+  ip_address: 10.176.4.157
+  console_ip: 10.176.14.231
+  console_port: 3008
+
+- &icx27
+  name: icx27
+  #HotelB-Core
+  #REmote2-Router
+  ip_address: 10.176.4.158
+  console_ip: 10.176.14.231
+  console_port: 3009
+
+- &icx28
+  name: icx28
+  #HotelB-StackA-Act
+  #Corp1-Access1
+  ip_address: 10.176.4.159
+  console_ip: 10.176.14.231
+  console_port: 3010
+
+- &icx29
+  name: icx29
+  #HotelB-StackA-Sta
+  #Corp1-Access2
+  ip_address: 10.176.4.160
+  console_ip: 10.176.14.231
+  console_port: 3011
+
+- &icx30
+  name: icx30
+  #HotelB-StackA-Mem
+  #Corp1-Access3
+  ip_address: 10.176.4.161
+  console_ip: 10.176.14.231
+  console_port: 3012
+
+- &icx31
+  name: icx31
+  #HotelB-StackB-Act
+  #Corp2-Access1
+  ip_address: 10.176.4.162
+  console_ip: 10.176.14.231
+  console_port: 3013
+
+- &icx32
+  name: icx32
+  #HotelB-StackB-Sta
+  #Corp2-Access2
+  ip_address: 10.176.4.163
+  console_ip: 10.176.14.231
+  console_port: 3014
+
+- &icx33
+  name: icx33
+  #HotelB-StackC-Act
+  #Corp2-Access3(Stack)
+  ip_address: 10.176.4.164
+  console_ip: 10.176.14.231
+  console_port: 3015
+
+- &icx34
+  name: icx34
+  #HotelB-StackC-Sta
+  #Corp2-Access3(Stack-Member)
+  ip_address: 10.176.4.162
+  console_ip: 10.176.14.231
+  console_port: 3016
+
+groups:
+- #HSP-290 No Stacking
+  name: '290nostack'
+  switches:
+  - <<: *icx19
+  - <<: *icx20
+  - <<: *icx21
+  - <<: *icx22
+  - <<: *icx23
+  - <<: *icx24
+  - <<: *icx25
+  - <<: *icx26
+  - <<: *icx27
+  - <<: *icx28
+  - <<: *icx29
+  - <<: *icx30
+  - <<: *icx31
+  - <<: *icx32
+  - <<: *icx33
+  - <<: *icx34
+
+- #HSP-290 Stacking Enabled
+  name: '290stack'
+  switches:
+  - <<: *icx19
+  - <<: *icx20
+  - <<: *icx23
+  - <<: *icx25
+  - <<: *icx27
+  - <<: *icx28
+  - <<: *icx31
+  - <<: *icx33
+
+- #HSP-290 Cores Only
+  name: '290coresonly'
+  switches:
+  - <<: *icx19
+  - <<: *icx27
+
+- #HSP-290 Stacks Only (Stacked)
+  name: '290stacksonly'
+  switches:
+  - <<: *icx20
+  - <<: *icx23
+  - <<: *icx25
+  - <<: *icx28
+  - <<: *icx31
+  - <<: *icx33
+
+
+- #ICX-390 Base config - No stacking
+  name: '390nostack'
+  switches:
+  - <<: *icx1
+  - <<: *icx2
+  - <<: *icx3
+  - <<: *icx4
+  - <<: *icx5
+  - <<: *icx6
+  - <<: *icx7
+  - <<: *icx8
+  - <<: *icx9
+  - <<: *icx10
+  - <<: *icx11
+  - <<: *icx12
+  - <<: *icx13
+  - <<: *icx14
+
+- #ICX-390 configured - Stacked
+  name: '390stacked'
+  switches:
+  - <<: *icx1
+  - <<: *icx2
+  - <<: *icx3
+  - <<: *icx4
+  - <<: *icx5
+  - <<: *icx6
+  - <<: *icx8
+  - <<: *icx9
+  - <<: *icx10
+  - <<: *icx11
+  - <<: *icx12
+  - <<: *icx13
+
+- #ICX-390 SiteA only - Stacked
+  name: '390sitea'
+  switches:
+  - <<: *icx8
+  - <<: *icx9
+  - <<: *icx10
+  - <<: *icx11
+  - <<: *icx12
+  - <<: *icx13
+
+- #ICX-390 SiteB only - Stacked
+  name: '390siteb'
+  switches:
+  - <<: *icx1
+  - <<: *icx2
+  - <<: *icx3
+  - <<: *icx4
+  - <<: *icx5
+  - <<: *icx6
+
+- #ICX-490 Base config - No stacking
+  name: '490nostack'
+  switches:
+  - <<: *icx1
+  - <<: *icx2
+  - <<: *icx3
+  - <<: *icx4
+  - <<: *icx5
+  - <<: *icx6
+  - <<: *icx7
+  - <<: *icx8
+  - <<: *icx9
+  - <<: *icx10
+  - <<: *icx11
+  - <<: *icx12
+  - <<: *icx13
+  - <<: *icx14
+  - <<: *icx15
+  - <<: *icx16
+  - <<: *icx17
+  - <<: *icx18
+  - <<: *icx19
+  - <<: *icx20
+  - <<: *icx21
+  - <<: *icx22
+  - <<: *icx23
+  - <<: *icx24
+  - <<: *icx25
+  - <<: *icx26
+  - <<: *icx27
+  - <<: *icx28
+  - <<: *icx29
+  - <<: *icx30
+  - <<: *icx31
+  - <<: *icx32
+  - <<: *icx33
+  - <<: *icx34
+
+- #ICX-490 Configured - Stacked
+  name: '490stack'
+  switches:
+  - <<: *icx1
+  - <<: *icx2
+  - <<: *icx3
+  - <<: *icx4
+  - <<: *icx5
+  - <<: *icx6
+  - <<: *icx7
+  - <<: *icx8
+  - <<: *icx9
+  - <<: *icx10
+  - <<: *icx11
+  - <<: *icx12
+  - <<: *icx13
+  - <<: *icx14
+  - <<: *icx15
+  - <<: *icx16
+  - <<: *icx17
+  - <<: *icx18
+  - <<: *icx19
+  - <<: *icx20
+  - <<: *icx21
+  - <<: *icx22
+  - <<: *icx23
+  - <<: *icx24
+  - <<: *icx25
+  - <<: *icx26
+  - <<: *icx27
+  - <<: *icx28
+  - <<: *icx31
+  - <<: *icx33
+
+- #ICX-490 Data Center Only
+  name: '490datacenter'
+  switches:
+  - <<: *icx2
+  - <<: *icx3
+  - <<: *icx8
+  - <<: *icx10
+  - <<: *icx15
+  - <<: *icx16
+  - <<: *icx20
+  - <<: *icx21
+  - <<: *icx22
+
+- #ICX-490 Border and ISPs
+  name: '490borderisp'
+  switches:
+  - <<: *icx4
+  - <<: *icx9
+  - <<: *icx11
+
+- #ICX-490 Corp Office 1
+  name: '490corp1'
+  switches:
+  - <<: *icx23
+  - <<: *icx24
+  - <<: *icx28
+  - <<: *icx29
+  - <<: *icx30
+
+- #ICX-490 Corp Office 2
+  name: '490corp2'
+  switches:
+  - <<: *icx25
+  - <<: *icx26
+  - <<: *icx31
+  - <<: *icx32
+  - <<: *icx33
+
+- #ICX-490 Call Center
+  name: '490callcenter'
+  switches:
+  - <<: *icx6
+  - <<: *icx7
+  - <<: *icx13
+  - <<: *icx14
+
+- #ICX-490 Remote1
+  name: '490remote1'
+  switches:
+  - <<: *icx12
+  - <<: *icx19
+
+- #ICX-490 Remote 2
+  name: '490remote2'
+  switches:
+  - <<: *icx5
+  - <<: *icx27
+
+- name: test-group
+  switches:
+  - <<: *icx1
+  - <<: *icx2
+
+- name: dc-edge-group
+  switches:
+  - <<: *icx15
+  - <<: *icx16
