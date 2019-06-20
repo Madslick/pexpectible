@@ -1,0 +1,42 @@
+
+
+Execution datetime: 20190620.073215 
+
+
+Trying 10.176.14.232...
+Connected to 10.176.14.232.
+Escape character is '^]'.
+
+
+
+ISP1(AS20)#
+end
+exit
+
+exit
+enable
+skip
+copy run tftp 10.175.4.58 configs/cr490-june19/isp1.conf
+
+ISP1(AS20)#^C
+ISP1(AS20)#
+ISP1(AS20)#end
+Invalid input -> end
+Type ? for a list
+ISP1(AS20)#exit
+ISP1(AS20)>
+SYSLOG: <14> Jun 20 06:32:16 ISP1(AS20) Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+^C
+ISP1(AS20)>
+ISP1(AS20)>exit
+Invalid input -> exit
+Type ? for a list
+ISP1(AS20)>enable
+No password has been assigned yet...
+ISP1(AS20)#
+SYSLOG: <14> Jun 20 06:32:21 ISP1(AS20) Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+skip
+Disable page display mode
+ISP1(AS20)#copy run tftp 10.175.4.58 configs/cr490-june19/isp1.conf
+ISP1(AS20)#Upload running-config to TFTP server done.
+ISP1(AS20)#

@@ -1,0 +1,52 @@
+
+
+Execution datetime: 20190313.094930 
+
+
+Trying 10.176.14.233...
+Connected to 10.176.14.233.
+Escape character is '^]'.
+
+
+
+WAN2#
+end
+exit
+skip
+exit
+enable
+config t
+ip route 10.73.164.0/24 10.175.4.1
+ip route 10.175.0.0/24 10.175.4.1
+ip route 10.175.4.0/24 10.175.4.1
+no ip route 0.0.0.0/0 10.175.4.1
+exit
+end
+page
+
+WAN2#^C
+WAN2#
+WAN2#end
+Invalid input -> end
+Type ? for a list
+WAN2#exit
+WAN2>skip
+Invalid input -> skip
+Type ? for a list
+WAN2>exit
+Invalid input -> exit
+Type ? for a list
+WAN2>enable
+No password has been assigned yet...
+WAN2#config t
+WAN2(config)#ip route 10.73.164.0/24 10.175.4.1
+WAN2(config)#ip route 10.175.0.0/24 10.175.4.1
+WAN2(config)#ip route 10.175.4.0/24 10.175.4.1
+WAN2(config)#no ip route 0.0.0.0/0 10.175.4.1
+WAN2(config)#exit
+WAN2#end
+Invalid input -> end
+Type ? for a list
+WAN2#page
+Enable page display mode
+WAN2#

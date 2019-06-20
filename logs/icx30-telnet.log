@@ -1,0 +1,45 @@
+
+
+Execution datetime: 20190531.130224 
+
+
+Trying 10.176.14.231...
+Connected to 10.176.14.231.
+Escape character is '^]'.
+
+
+*
+* * * ttyS12 is being used by (pid=9780) !!!
+*
+
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 1
+
+config terminal
+
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 
+
+Corp1-Access-3(config)#^C
+Corp1-Access-3(config)#
+Corp1-Access-3(config)#config terminal
+Invalid input -> config terminal
+Type ? for a list
+Corp1-Access-3(config)#

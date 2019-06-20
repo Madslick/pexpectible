@@ -1,0 +1,42 @@
+
+
+Execution datetime: 20190620.073246 
+
+
+Trying 10.176.14.231...
+Connected to 10.176.14.231.
+Escape character is '^]'.
+
+
+
+Corp1-Dist-2#
+Corp1-Dist-2#
+end
+exit
+
+exit
+enable
+skip
+copy run tftp 10.175.4.58 configs/cr490-june19/corp1-dist2.conf
+^C
+Corp1-Dist-2#
+Corp1-Dist-2#end
+Invalid input -> end
+Type ? for a list
+Corp1-Dist-2#exit
+Corp1-Dist-2>
+SYSLOG: <14> Jun 20 06:32:47 Corp1-Dist-2 Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+^C
+Corp1-Dist-2>
+Corp1-Dist-2>exit
+Invalid input -> exit
+Type ? for a list
+Corp1-Dist-2>enable
+No password has been assigned yet...
+Corp1-Dist-2#
+SYSLOG: <14> Jun 20 06:32:52 Corp1-Dist-2 Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+skip
+Disable page display mode
+Corp1-Dist-2#copy run tftp 10.175.4.58 configs/cr490-june19/corp1-dist2.conf
+Corp1-Dist-2#.Upload running-config to TFTP server done.
+Corp1-Dist-2#

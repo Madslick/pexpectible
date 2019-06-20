@@ -1,0 +1,58 @@
+
+
+Execution datetime: 20190313.094908 
+
+
+Trying 10.176.14.231...
+Connected to 10.176.14.231.
+Escape character is '^]'.
+
+
+
+DC-Access-3(config-if-e10000-1/3/2)#
+DC-Access-3(config-if-e10000-1/3/2)#
+end
+exit
+skip
+exit
+enable
+config t
+ip route 10.73.164.0/24 10.175.4.1
+ip route 10.175.0.0/24 10.175.4.1
+ip route 10.175.4.0/24 10.175.4.1
+no ip route 0.0.0.0/0 10.175.4.1
+exit
+end
+page
+^C
+DC-Access-3(config-if-e10000-1/3/2)#
+DC-Access-3(config-if-e10000-1/3/2)#end
+DC-Access-3#
+SYSLOG: <14> Mar 13 08:49:09 DC-Access-3 Security: running-config was potentially changed by operator from console 
+exit
+DC-Access-3>
+SYSLOG: <14> Mar 13 08:49:09 DC-Access-3 Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+skip
+Invalid input -> skip
+Type ? for a list
+DC-Access-3>exit
+Invalid input -> exit
+Type ? for a list
+DC-Access-3>enable
+No password has been assigned yet...
+DC-Access-3#
+SYSLOG: <14> Mar 13 08:49:13 DC-Access-3 Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+config t
+DC-Access-3(config)#ip route 10.73.164.0/24 10.175.4.1
+DC-Access-3(config)#ip route 10.175.0.0/24 10.175.4.1
+DC-Access-3(config)#ip route 10.175.4.0/24 10.175.4.1
+DC-Access-3(config)#no ip route 0.0.0.0/0 10.175.4.1
+DC-Access-3(config)#exit
+DC-Access-3#
+SYSLOG: <14> Mar 13 08:49:19 DC-Access-3 Security: running-config was potentially changed by operator from console 
+end
+Invalid input -> end
+Type ? for a list
+DC-Access-3#page
+Enable page display mode
+DC-Access-3#

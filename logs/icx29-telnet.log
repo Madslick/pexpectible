@@ -1,0 +1,127 @@
+
+
+Execution datetime: 20190530.184919 
+
+
+Trying 10.176.14.231...
+Connected to 10.176.14.231.
+Escape character is '^]'.
+
+
+*
+* * * ttyS11 is being used by (pid=20003) !!!
+*
+
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 1
+
+exit
+enable
+skip
+copy tftp sys 10.175.4.58 software/08070e/FI08070e_Manifest.txt all-images-primary
+y
+
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 
+^C
+Corp1-Access-2#
+Corp1-Access-2#exit
+Corp1-Access-2>
+SYSLOG: <14> May 30 17:49:23 Corp1-Access-2 Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+enable
+No password has been assigned yet...
+Corp1-Access-2#
+SYSLOG: <14> May 30 17:49:25 Corp1-Access-2 Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+
+SYSLOG: <14> May 30 17:49:25 Corp1-Access-2 STP: VLAN 30 Port 1/1/48 STP State -> FORWARDING (PortDown) 
+
+SYSLOG: <14> May 30 17:49:25 Corp1-Access-2 STP: VLAN 30 Port 1/1/48 STP State -> BLOCKING (DOT1wTransition) 
+
+SYSLOG: <14> May 30 17:49:25 Corp1-Access-2 STP: VLAN 30 Port 1/1/48 STP State -> DISABLED (PortDown) 
+
+SYSLOG: <14> May 30 17:49:25 Corp1-Access-2 STP: VLAN 90 Port 1/1/48 STP State -> FORWARDING (PortDown) 
+
+SYSLOG: <14> May 30 17:49:25 Corp1-Access-2 STP: VLAN 90 Port 1/1/48 STP State -> BLOCKING (DOT1wTransition) 
+
+SYSLOG: <14> May 30 17:49:25 Corp1-Access-2 STP: VLAN 90 Port 1/1/48 STP State -> DISABLED (PortDown) 
+
+SYSLOG: <14> May 30 17:49:25 Corp1-Access-2 System: Interface ethernet 1/1/48, state down 
+skip
+Disable page display mode
+Corp1-Access-2#
+SYSLOG: <14> May 30 17:49:27 Corp1-Access-2 System: Interface ethernet 1/1/48, state up 
+
+SYSLOG: <14> May 30 17:49:27 Corp1-Access-2 STP: VLAN 30 Port 1/1/48 STP State -> BLOCKING (DOT1wTransition) 
+
+SYSLOG: <14> May 30 17:49:27 Corp1-Access-2 STP: VLAN 90 Port 1/1/48 STP State -> BLOCKING (DOT1wTransition) 
+copy tftp sys 10.175.4.58 software/08070e/FI08070e_Manifest.txt all-images-primary
+
+You are about to download boot image and boot signature image as well, ARE YOU SURE?(enter 'y' or 'n'): y
+Corp1-Access-2#Flash Memory Write (8192 bytes per dot) 
+Corp1-Access-2#
+DOWNLOADING MANIFEST FILE   Done.
+
+SYSLOG: <14> May 30 17:49:28 Corp1-Access-2 MANIFEST_FILE_DOWNLOAD_DONE 
+
+Manifest upgrade in progress...
+
+SYSLOG: <14> May 30 17:49:28 Corp1-Access-2 Different Flash-image filenames detected between flash-image spr08070c.bin and requested flash-image spr08070e.bin 
+
+SYSLOG: <14> May 30 17:49:28 Corp1-Access-2 Different boot-image filenames detected between boot-image spz10113.bin and requested boot-image spz10114.bin 
+Corp1-Access-2#Flash Memory Write (8192 bytes per dot) 
+
+COPY ICX7450 SIGNATURE TFTP to Flash Done 
+ 
+SYSLOG: <14> May 30 17:49:28 Corp1-Access-2 ICX7450_SIG_COPY_DONE 
+Corp1-Access-2#Load to buffer (8192 bytes per dot) 
+...............................................................
+SYSLOG: <14> May 30 17:49:32 Corp1-Access-2 STP: VLAN 30 Port 1/1/48 STP State -> LEARNING (DOT1wTransition) 
+
+SYSLOG: <14> May 30 17:49:32 Corp1-Access-2 STP: VLAN 30 Port 1/1/48 STP State -> FORWARDING (DOT1wTransition) 
+...
+SYSLOG: <14> May 30 17:49:32 Corp1-Access-2 STP: VLAN 90 Port 1/1/48 STP State -> LEARNING (DOT1wTransition) 
+
+SYSLOG: <14> May 30 17:49:32 Corp1-Access-2 STP: VLAN 90 Port 1/1/48 STP State -> FORWARDING (DOT1wTransition) 
+...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+SYNCING IMAGE TO FLASH. DO NOT SWITCH OVER OR POWER DOWN THE UNIT(8192 bytes per dot)...
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Copy ICX7450 from TFTP to Flash Done 
+
+SYSLOG: <14> May 30 17:51:46 Corp1-Access-2 ICX7450_IMAGE_COPY_DONE 
+Corp1-Access-2#Flash Memory Write (8192 bytes per dot) 
+...
+DOWNLOAD OF ICX7450 BOOT SIGNATURE Done
+ 
+SYSLOG: <14> May 30 17:51:46 Corp1-Access-2 ICX7450_BOOT_SIG_COPY_DONE 
+Corp1-Access-2#Load to buffer (8192 bytes per dot) 
+.................
+SYNCING IMAGE TO FLASH. DO NOT SWITCH OVER OR POWER DOWN THE UNIT(8192 bytes per dot)...
+................................................................................................
+ICX7450 Boot IMAGE COPY IS DONE 
+ 
+  Manifest image download is complete, please reload the system 
+ Copying the downloaded/created manifest file from ramfs to flash... 
+
+SYSLOG: <14> May 30 17:51:56 Corp1-Access-2 ICX7450_BOOT_IMAGE_COPY_DONE 
+
+SYSLOG: <14> May 30 17:51:56 Corp1-Access-2 MANIFEST_COPY_DONE 
+Corp1-Access-2#.
+Copy Done.
+Corp1-Access-2#

@@ -1,0 +1,67 @@
+
+
+Execution datetime: 20190530.184738 
+
+
+Trying 10.176.14.231...
+Connected to 10.176.14.231.
+Escape character is '^]'.
+
+
+*
+* * * ttyS14 is being used by (pid=20219) !!!
+*
+
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 1
+
+exit
+enable
+skip
+copy tftp sys 10.175.4.58 software/08070e/FI08070e_Manifest.txt all-images-primary
+y
+
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 
+
+Corp2-Access-2#^C
+Corp2-Access-2#
+Corp2-Access-2#exit
+Corp2-Access-2>
+SYSLOG: <14> May 30 17:47:41 Corp2-Access-2 Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+enable
+No password has been assigned yet...
+Corp2-Access-2#
+SYSLOG: <14> May 30 17:47:43 Corp2-Access-2 Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+skip
+Disable page display mode
+Corp2-Access-2#copy tftp sys 10.175.4.58 software/08070e/FI08070e_Manifest.txt all-images-primary
+
+You are about to download boot image and boot signature image as well, ARE YOU SURE?(enter 'y' or 'n'): y
+Corp2-Access-2#Flash Memory Write (8192 bytes per dot) .
+Corp2-Access-2#....
+DOWNLOADING MANIFEST FILE   Done.
+Both FI Application image and boot images are same. Update not required
+Corp2-Access-2#
+SYSLOG: <14> May 30 17:47:47 Corp2-Access-2 MANIFEST_FILE_DOWNLOAD_DONE 
+
+SYSLOG: <14> May 30 17:47:47 Corp2-Access-2 Flash-image files names are the same between flash-image spr08070e.bin and requested flash-image spr08070e.bin  
+
+SYSLOG: <14> May 30 17:47:47 Corp2-Access-2 Boot-image files names are the same between boot-image spz10114.bin and requested boot-image spz10114.bin  

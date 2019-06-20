@@ -1,0 +1,52 @@
+
+
+Execution datetime: 20190313.094755 
+
+
+Trying 10.176.14.232...
+Connected to 10.176.14.232.
+Escape character is '^]'.
+
+
+
+DC-Dist-1#
+end
+exit
+skip
+exit
+enable
+config t
+ip route 10.73.164.0/24 10.175.4.1
+ip route 10.175.0.0/24 10.175.4.1
+ip route 10.175.4.0/24 10.175.4.1
+no ip route 0.0.0.0/0 10.175.4.1
+exit
+end
+page
+
+DC-Dist-1#^C
+DC-Dist-1#
+DC-Dist-1#end
+Invalid input -> end
+Type ? for a list
+DC-Dist-1#exit
+DC-Dist-1>skip
+Invalid input -> skip
+Type ? for a list
+DC-Dist-1>exit
+Invalid input -> exit
+Type ? for a list
+DC-Dist-1>enable
+No password has been assigned yet...
+DC-Dist-1#config t
+DC-Dist-1(config)#ip route 10.73.164.0/24 10.175.4.1
+DC-Dist-1(config)#ip route 10.175.0.0/24 10.175.4.1
+DC-Dist-1(config)#ip route 10.175.4.0/24 10.175.4.1
+DC-Dist-1(config)#no ip route 0.0.0.0/0 10.175.4.1
+DC-Dist-1(config)#exit
+DC-Dist-1#end
+Invalid input -> end
+Type ? for a list
+DC-Dist-1#page
+Enable page display mode
+DC-Dist-1#

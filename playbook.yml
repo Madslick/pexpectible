@@ -1,0 +1,367 @@
+plays:
+- name: enable-remote-syslog
+  steps:
+  - command: skip
+    wait_time: 1
+    expect:
+      expect_strings:
+      - phrase: uccess
+        steps:
+        - command: "!ctrl+c!"
+          wait_time: 0
+        - command: exit
+          wait_time: 2
+      - phrase: timed output
+        steps:
+        - command: config t
+          wait_time: 1
+
+  - command: enable
+    wait_time: 1
+
+  - command: config t
+    wait_time: 1
+
+  - command: logging host 10.254.20.50
+    wait_time: 1
+
+  - command: exit
+    wait_time: 1
+
+- name: test-ctrl-y
+  steps:
+  - command: "!ctrl+y!"
+    wait_time: 1
+    inline: true
+
+  - command: m
+    wait_time: 1
+    inline: true
+
+  - command: "!enter!"
+    wait_time: 1
+    inline: true
+
+- name: write-mem
+  steps:
+  - command: "!ctrl+c!"
+    wait_time: 3
+
+  - command: exit
+    wait_time: 2
+
+  - command: enable
+    wait_time: 1
+
+  - command: skip
+    wait_time: 1
+    expect:
+    - phrase: error
+
+  - command: config t
+    wait_time: 1
+
+  - command: clock timezone us Pacific
+    wait_time: 1
+
+  - command: end
+    wait_time: 1
+
+  - command: wr mem
+    wait_time: 1
+
+  - command: page
+    wait_time: 1
+
+- name: static-routes
+  steps:
+  - command: "!ctrl+c!"
+    wait_time: 3
+
+  - command: exit
+    wait_time: 2
+
+  - command: enable
+    wait_time: 1
+
+  - command: skip
+    wait_time: 1
+    expect:
+    - phrase: error
+
+  - command: config t
+    wait_time: 1
+
+  - command: ip route 10.73.164.0/24 10.175.4.1
+    wait_time: 1
+
+  - command: ip route 10.175.0.0/24 10.175.4.1
+    wait_time: 1
+
+  - command: ip route 10.175.4.0/24 10.175.4.1
+    wait_time: 1
+
+  - command: no ip route 0.0.0.0/0 10.175.4.1
+    wait_time: 1
+
+  - command: end
+    wait_time: 1
+
+  - command: page
+    wait_time: 1
+
+  - command: end
+    wait_time: 1
+
+- name: snmp-remove
+  steps:
+  - command: "!ctrl+c!"
+    wait_time: 3
+
+  - command: exit
+    wait_time: 2
+
+  - command: enable
+    wait_time: 1
+
+  - command: skip
+    wait_time: 1
+    expect:
+    - phrase: error
+
+  - command: config t
+    wait_time: 1
+
+  - command: no snmp-server comm public ro public
+    wait_time: 1
+
+  - command: no snmp-server contact Ruckus Education
+    wait_time: 1
+
+  - command: no snmp-server loc Rack
+    wait_time: 1
+
+  - command: no snmp-server trap-source lo 1
+    wait_time: 1
+
+  - command: no snmp-server host 10.254.20.50 version v2c
+    wait_time: 1
+
+  - command: no ip access-l stand 10
+    wait_time: 1
+
+  - command: no ip access-list standard public
+    wait_time: 1
+
+  - command: end
+    wait_time: 1
+
+  - command: page
+    wait_time: 1
+
+  - command: end
+    wait_time: 1
+
+- name: test
+  steps:
+  - command: "!ctrl+c!"
+    wait_time: 3
+
+  - command: "config %test_attr%"
+    wait_time: 1
+
+  custom_command_attributes:
+    - name: test_attr
+      switches:
+      - switch: icx30
+        attribute: terminal
+      - switch: icx31
+        attribute: t
+
+- name: 390-start
+  steps:
+
+  - command: "!ctrl+c!"
+    wait_time: 3
+
+  - command: exit
+    wait_time: 1
+
+  - command: enable
+    wait_time: 1
+
+  - command: skip
+    wait_time: 1
+
+  - command: erase startup
+    wait_time: 1
+
+  - command: "copy tftp start 10.175.4.58 %test_attr%"
+    wait_time: 1
+
+  - command: reload
+    wait_time: 1
+
+  - command: y
+    wait_time: 1
+
+  - command: y
+    wait_time: 1
+
+  custom_command_attributes:
+  - name: test_attr
+    switches:
+    - switch: icx1
+      attribute: configs/cr490-june19/SiteB-Dist2.txt
+    - switch: icx2
+      attribute: configs/cr490-june19/SiteB-Dist1.txt
+    - switch: icx3
+      attribute: configs/cr490-june19/SiteB-Core.txt
+    - switch: icx4
+      attribute: configs/cr490-june19/SiteB-ISP.txt
+    - switch: icx5
+      attribute: configs/cr490-june19/SiteB-IDF1.txt
+    - switch: icx6
+      attribute: configs/cr490-june19/SiteB-IDF2-Active.txt
+    - switch: icx7
+      attribute: configs/cr490-june19/SiteB-IDF2-Member.txt
+    - switch: icx8
+      attribute: configs/cr490-june19/SiteA-Dist2.txt
+    - switch: icx9
+      attribute: configs/cr490-june19/SiteA-Dist1.txt
+    - switch: icx10
+      attribute: configs/cr490-june19/SiteA-Core.txt
+    - switch: icx11
+      attribute: configs/cr490-june19/SiteA-ISP.txt
+    - switch: icx12
+      attribute: configs/cr490-june19/SiteA-IDF1.txt
+    - switch: icx13
+      attribute: configs/cr490-june19/SiteA-IDF2-Active.txt
+    - switch: icx14
+      attribute: configs/cr490-june19/SiteA-IDF2-Member.txt
+
+- name: 390-start-backup
+  steps:
+
+  - command: "!ctrl+c!"
+    wait_time: 3
+
+  - command: exit
+    wait_time: 1
+
+  - command: enable
+    wait_time: 1
+
+  - command: skip
+    wait_time: 1
+
+  - command: "copy run tftp 10.175.4.58 %test_attr%"
+    wait_time: 1
+
+  custom_command_attributes:
+  - name: test_attr
+    switches:
+    - switch: icx1
+      attribute: configs/cr490-june19/SiteB-Dist2.txt
+    - switch: icx2
+      attribute: configs/cr490-june19/SiteB-Dist1.txt
+    - switch: icx3
+      attribute: configs/cr490-june19/SiteB-Core.txt
+    - switch: icx4
+      attribute: configs/cr490-june19/SiteB-ISP.txt
+    - switch: icx5
+      attribute: configs/cr490-june19/SiteB-IDF1.txt
+    - switch: icx6
+      attribute: configs/cr490-june19/SiteB-IDF2-Active.txt
+    - switch: icx7
+      attribute: configs/cr490-june19/SiteB-IDF2-Member.txt
+    - switch: icx8
+      attribute: configs/cr490-june19/SiteA-Dist2.txt
+    - switch: icx9
+      attribute: configs/cr490-june19/SiteA-Dist1.txt
+    - switch: icx10
+      attribute: configs/cr490-june19/SiteA-Core.txt
+    - switch: icx11
+      attribute: configs/cr490-june19/SiteA-ISP.txt
+    - switch: icx12
+      attribute: configs/cr490-june19/SiteA-IDF1.txt
+    - switch: icx13
+      attribute: configs/cr490-june19/SiteA-IDF2-Active.txt
+    - switch: icx14
+      attribute: configs/cr490-june19/SiteA-IDF2-Member.txt
+
+- name: 490-final-backup 
+  steps:
+
+  - command: "!ctrl+c!"
+    wait_time: 3
+
+  - command: exit
+    wait_time: 1
+
+  - command: enable
+    wait_time: 1
+
+  - command: skip
+    wait_time: 1
+
+  - command: "copy run tftp 10.175.4.58 %test_attr%"
+    wait_time: 1
+
+  custom_command_attributes:
+  - name: test_attr
+    switches:
+    - switch: icx2
+      attribute: configs/cr490-june19/dc-agg2.conf
+    - switch: icx3
+      attribute: configs/cr490-june19/dc-dist2.conf
+    - switch: icx4
+      attribute: configs/cr490-june19/isp2.conf
+    - switch: icx5
+      attribute: configs/cr490-june19/remote2-access.conf
+    - switch: icx6
+      attribute: configs/cr490-june19/call-dist2.conf
+    - switch: icx7
+      attribute: configs/cr490-june19/call-access2.conf
+    - switch: icx8
+      attribute: configs/cr490-june19/dc-agg1.conf
+    - switch: icx9
+      attribute: configs/cr490-june19/border.conf
+    - switch: icx10
+      attribute: configs/cr490-june19/dc-dist1.conf
+    - switch: icx11
+      attribute: configs/cr490-june19/isp1.conf
+    - switch: icx12
+      attribute: configs/cr490-june19/remote1-access.conf
+    - switch: icx13
+      attribute: configs/cr490-june19/call-access1.conf
+    - switch: icx14
+      attribute: configs/cr490-june19/call-dist1.conf
+    - switch: icx15
+      attribute: configs/cr490-june19/edge1.conf
+    - switch: icx16
+      attribute: configs/cr490-june19/edge2.conf
+    - switch: icx19
+      attribute: configs/cr490-june19/remote1-router.conf
+    - switch: icx20
+      attribute: configs/cr490-june19/dc-access1.conf
+    - switch: icx21
+      attribute: configs/cr490-june19/dc-access2.conf
+    - switch: icx22
+      attribute: configs/cr490-june19/dc-access3.conf
+    - switch: icx23
+      attribute: configs/cr490-june19/corp1-dist1.conf
+    - switch: icx24
+      attribute: configs/cr490-june19/corp1-dist2.conf
+    - switch: icx25
+      attribute: configs/cr490-june19/corp2-dist1.conf
+    - switch: icx26
+      attribute: configs/cr490-june19/corp2-dist2.conf
+    - switch: icx27
+      attribute: configs/cr490-june19/remote2-router.conf
+    - switch: icx28
+      attribute: configs/cr490-june19/corp1-access1.conf
+    - switch: icx31
+      attribute: configs/cr490-june19/corp2-access1.conf
+    - switch: icx33
+      attribute: configs/cr490-june19/corp2-access3.conf

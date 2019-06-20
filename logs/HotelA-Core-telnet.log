@@ -1,0 +1,58 @@
+
+
+Execution datetime: 20190313.094854 
+
+
+Trying 10.176.14.231...
+Connected to 10.176.14.231.
+Escape character is '^]'.
+
+
+
+RemoteOffice1-Router#
+end
+exit
+skip
+exit
+enable
+config t
+ip route 10.73.164.0/24 10.175.4.1
+ip route 10.175.0.0/24 10.175.4.1
+ip route 10.175.4.0/24 10.175.4.1
+no ip route 0.0.0.0/0 10.175.4.1
+exit
+end
+page
+
+RemoteOffice1-Router#^C
+RemoteOffice1-Router#
+RemoteOffice1-Router#end
+Invalid input -> end
+Type ? for a list
+RemoteOffice1-Router#exit
+
+SYSLOG: <14>Jan  4 12:34:48 RemoteOffice1-Router Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+RemoteOffice1-Router>skip
+Invalid input -> skip
+Type ? for a list
+RemoteOffice1-Router>exit
+Invalid input -> exit
+Type ? for a list
+RemoteOffice1-Router>enable
+No password has been assigned yet...
+
+SYSLOG: <14>Jan  4 12:34:52 RemoteOffice1-Router Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+RemoteOffice1-Router#config t
+RemoteOffice1-Router(config)#ip route 10.73.164.0/24 10.175.4.1
+RemoteOffice1-Router(config)#ip route 10.175.0.0/24 10.175.4.1
+RemoteOffice1-Router(config)#ip route 10.175.4.0/24 10.175.4.1
+RemoteOffice1-Router(config)#no ip route 0.0.0.0/0 10.175.4.1
+RemoteOffice1-Router(config)#exit
+
+SYSLOG: <14>Jan  4 12:34:58 RemoteOffice1-Router Security: running-config was changed by operator from console 
+RemoteOffice1-Router#end
+Invalid input -> end
+Type ? for a list
+RemoteOffice1-Router#page
+Enable page display mode
+RemoteOffice1-Router#

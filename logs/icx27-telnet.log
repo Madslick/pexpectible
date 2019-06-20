@@ -1,0 +1,42 @@
+
+
+Execution datetime: 20190620.073245 
+
+
+Trying 10.176.14.231...
+Connected to 10.176.14.231.
+Escape character is '^]'.
+
+
+
+Remote2-Router#
+end
+exit
+
+exit
+enable
+skip
+copy run tftp 10.175.4.58 configs/cr490-june19/remote2-router.conf
+
+Remote2-Router#^C
+Remote2-Router#
+Remote2-Router#end
+Invalid input -> end
+Type ? for a list
+Remote2-Router#exit
+Remote2-Router>
+SYSLOG: <14> Jun 20 06:32:45 Remote2-Router Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+^C
+Remote2-Router>
+Remote2-Router>exit
+Invalid input -> exit
+Type ? for a list
+Remote2-Router>enable
+No password has been assigned yet...
+Remote2-Router#
+SYSLOG: <14> Jun 20 06:32:51 Remote2-Router Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+skip
+Disable page display mode
+Remote2-Router#copy run tftp 10.175.4.58 configs/cr490-june19/remote2-router.conf
+Remote2-Router#Upload running-config to TFTP server done.
+Remote2-Router#

@@ -1,0 +1,38 @@
+
+
+Execution datetime: 20190620.073215 
+
+
+Trying 10.176.14.232...
+Connected to 10.176.14.232.
+Escape character is '^]'.
+
+
+
+DC-Dist-1#
+end
+exit
+
+exit
+enable
+skip
+copy run tftp 10.175.4.58 configs/cr490-june19/dc-dist1.conf
+
+DC-Dist-1#^C
+DC-Dist-1#
+DC-Dist-1#end
+Invalid input -> end
+Type ? for a list
+DC-Dist-1#exit
+DC-Dist-1>^C
+DC-Dist-1>
+DC-Dist-1>exit
+Invalid input -> exit
+Type ? for a list
+DC-Dist-1>enable
+No password has been assigned yet...
+DC-Dist-1#skip
+Disable page display mode
+DC-Dist-1#copy run tftp 10.175.4.58 configs/cr490-june19/dc-dist1.conf
+DC-Dist-1#Upload running-config to TFTP server done.
+DC-Dist-1#

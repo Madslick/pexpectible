@@ -1,0 +1,37 @@
+
+
+Execution datetime: 20190620.070558 
+
+
+Trying 10.176.14.233...
+Connected to 10.176.14.233.
+Escape character is '^]'.
+
+
+
+PEN-DEVICE2#
+end
+exit
+
+exit
+enable
+skip
+copy run tftp 10.175.4.58 %test_attr%
+
+PEN-DEVICE2#^C
+PEN-DEVICE2#
+PEN-DEVICE2#end
+Invalid input -> end
+Type ? for a list
+PEN-DEVICE2#exit
+PEN-DEVICE2>^C
+PEN-DEVICE2>
+PEN-DEVICE2>exit
+Invalid input -> exit
+Type ? for a list
+PEN-DEVICE2>enable
+No password has been assigned yet...
+PEN-DEVICE2#skip
+Disable page display mode
+PEN-DEVICE2#copy run tftp 10.175.4.58 %test_attr%
+PEN-DEVICE2#

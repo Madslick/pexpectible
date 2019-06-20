@@ -1,0 +1,58 @@
+
+
+Execution datetime: 20190313.094919 
+
+
+Trying 10.176.14.231...
+Connected to 10.176.14.231.
+Escape character is '^]'.
+
+
+
+Corp1-Access-1#
+Corp1-Access-1#
+end
+exit
+skip
+exit
+enable
+config t
+ip route 10.73.164.0/24 10.175.4.1
+ip route 10.175.0.0/24 10.175.4.1
+ip route 10.175.4.0/24 10.175.4.1
+no ip route 0.0.0.0/0 10.175.4.1
+exit
+end
+page
+^C
+Corp1-Access-1#
+Corp1-Access-1#end
+Invalid input -> end
+Type ? for a list
+Corp1-Access-1#exit
+Corp1-Access-1>
+SYSLOG: <14> Mar 13 08:49:21 Corp1-Access-1 Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+skip
+Invalid input -> skip
+Type ? for a list
+Corp1-Access-1>exit
+Invalid input -> exit
+Type ? for a list
+Corp1-Access-1>enable
+No password has been assigned yet...
+Corp1-Access-1#
+SYSLOG: <14> Mar 13 08:49:25 Corp1-Access-1 Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+config t
+Corp1-Access-1(config)#ip route 10.73.164.0/24 10.175.4.1
+Corp1-Access-1(config)#ip route 10.175.0.0/24 10.175.4.1
+Corp1-Access-1(config)#ip route 10.175.4.0/24 10.175.4.1
+Corp1-Access-1(config)#no ip route 0.0.0.0/0 10.175.4.1
+Corp1-Access-1(config)#exit
+Corp1-Access-1#
+SYSLOG: <14> Mar 13 08:49:31 Corp1-Access-1 Security: running-config was potentially changed by operator from console 
+end
+Invalid input -> end
+Type ? for a list
+Corp1-Access-1#page
+Enable page display mode
+Corp1-Access-1#

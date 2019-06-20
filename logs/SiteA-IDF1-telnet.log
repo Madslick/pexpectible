@@ -1,0 +1,66 @@
+
+
+Execution datetime: 20190313.094844 
+
+
+Trying 10.176.14.232...
+Connected to 10.176.14.232.
+Escape character is '^]'.
+
+
+
+RemoteOffice1-Switch#
+end
+exit
+skip
+exit
+enable
+config t
+ip route 10.73.164.0/24 10.175.4.1
+ip route 10.175.0.0/24 10.175.4.1
+ip route 10.175.4.0/24 10.175.4.1
+no ip route 0.0.0.0/0 10.175.4.1
+exit
+end
+page
+
+RemoteOffice1-Switch#^C
+RemoteOffice1-Switch#
+RemoteOffice1-Switch#end
+Invalid input -> end
+Type ? for a list
+RemoteOffice1-Switch#exit
+RemoteOffice1-Switch>
+SYSLOG: <14> Mar 13 08:48:23 RemoteOffice1-Switch Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+skip
+Invalid input -> skip
+Type ? for a list
+RemoteOffice1-Switch>exit
+Invalid input -> exit
+Type ? for a list
+RemoteOffice1-Switch>enable
+No password has been assigned yet...
+RemoteOffice1-Switch#
+SYSLOG: <14> Mar 13 08:48:27 RemoteOffice1-Switch Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+config t
+RemoteOffice1-Switch(config)#ip route 10.73.164.0/24 10.175.4.1
+Invalid input -> route 10.73.164.0/24 10.175.4.1
+Type ? for a list
+RemoteOffice1-Switch(config)#ip route 10.175.0.0/24 10.175.4.1
+Invalid input -> route 10.175.0.0/24 10.175.4.1
+Type ? for a list
+RemoteOffice1-Switch(config)#ip route 10.175.4.0/24 10.175.4.1
+Invalid input -> route 10.175.4.0/24 10.175.4.1
+Type ? for a list
+RemoteOffice1-Switch(config)#no ip route 0.0.0.0/0 10.175.4.1
+Invalid input -> route 0.0.0.0/0 10.175.4.1
+Type ? for a list
+RemoteOffice1-Switch(config)#exit
+RemoteOffice1-Switch#
+SYSLOG: <14> Mar 13 08:48:33 RemoteOffice1-Switch Security: running-config was potentially changed by operator from console 
+end
+Invalid input -> end
+Type ? for a list
+RemoteOffice1-Switch#page
+Enable page display mode
+RemoteOffice1-Switch#

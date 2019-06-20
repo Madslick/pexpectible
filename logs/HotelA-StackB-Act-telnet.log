@@ -1,0 +1,136 @@
+
+
+Execution datetime: 20190313.094932 
+
+
+Trying 10.176.14.231...
+Connected to 10.176.14.231.
+Escape character is '^]'.
+
+
+*
+* * * ttyS5 is being used by (pid=2818) !!!
+*
+
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 1
+skip
+exit
+enable
+config t
+ip route 10.73.164.0/24 10.175.4.1
+ip route 10.175.0.0/24 10.175.4.1
+ip route 10.175.4.0/24 10.175.4.1
+no ip route 0.0.0.0/0 10.175.4.1
+exit
+end
+page
+
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 
+1 - Initiate a regular session
+2 - Initiate a sniff session
+3 - Send messages to another user
+4 - Kill session(s)
+5 - Quit
+
+Enter your option : 
+                                                                  snmp-server community ..... ro "public"
+snmp-server community ..... rw "private"
+snmp-server contact Ruckus Education - ICX-490 (Rack C36)
+snmp-server location 350 W Java Dr, Sunnyvale, CA
+snmp-server trap-source loopback 1
+snmp-server host 10.254.20.50 version v2c .....
+!
+!
+clock summer-time
+clock timezone us Pacific
+!
+!
+ntp
+ server 10.254.10.100
+!
+!
+!
+ip multicast-routing
+!
+router ospf
+ area 240 
+ area 0 
+ area 251 
+--More--, next page: Space, next line: Return key, quit: Control-c                                                                   default-information-originate
+ redistribute connected 
+!
+router vrrp-extended
+ipv6 router vrrp-extended
+!
+!
+!
+router pim
+ rp-address 10.255.255.1 
+!
+!
+ipv6 router ospf
+ area 240
+ area 0
+ area 251
+ default-passive-interface
+!
+interface loopback 1
+ ip address 10.240.255.1 255.255.255.255
+ ip ospf area 240
+!
+interface management 1
+--More--, next page: Space, next line: Return key, quit: Control-c                                                                   ip address 10.175.4.154 255.255.255.0
+!
+interface ethernet 1/1/1
+ port-name Unused - Do Not Enable
+ disable
+!
+interface ethernet 1/1/2
+ port-name Unused - Do Not Enable
+ disable
+!
+interface ethernet 1/1/13
+ port-name To Corp1-Access-1 e 1/1/13
+ speed-duplex 1000-full
+!
+interface ethernet 1/1/14
+ port-name To Corp1-Access-2 e 1/1/13
+ speed-duplex 1000-full
+!
+interface ethernet 1/1/15
+ port-name To Corp1-Access-3 e 1/1/13
+ speed-duplex 1000-full
+!
+interface ethernet 1/1/17
+--More--, next page: Space, next line: Return key, quit: Control-c                                                                  /24 10.175.4.1              searching...
+Corp1-Dist-1#ip route 10.175.0.0/24 10.175.4.1
+Invalid input -> ip route 10.175.0.0/24 10.175.4.1
+Type ? for a list
+Corp1-Dist-1#ip route 10.175.4.0/24 10.175.4.1
+Invalid input -> ip route 10.175.4.0/24 10.175.4.1
+Type ? for a list
+Corp1-Dist-1#no ip route 0.0.0.0/0 10.175.4.1
+Invalid input -> ip route 0.0.0.0/0 10.175.4.1
+Type ? for a list
+Corp1-Dist-1#exit
+Corp1-Dist-1>
+SYSLOG: <14> Mar 13 08:49:43 Corp1-Dist-1 Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+end
+Invalid input -> end
+Type ? for a list
+Corp1-Dist-1>page
+Invalid input -> page
+Type ? for a list
+Corp1-Dist-1>

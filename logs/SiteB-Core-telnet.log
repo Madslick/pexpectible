@@ -1,0 +1,47 @@
+
+
+Execution datetime: 20190313.094845 
+
+
+Trying 10.176.14.232...
+Connected to 10.176.14.232.
+Escape character is '^]'.
+
+
+
+DC-Dist-2>
+DC-Dist-2>skip
+exit
+enable
+config t
+ip route 10.73.164.0/24 10.175.4.1
+ip route 10.175.0.0/24 10.175.4.1
+ip route 10.175.4.0/24 10.175.4.1
+no ip route 0.0.0.0/0 10.175.4.1
+exit
+end
+page
+skip
+Invalid input -> skip
+Type ? for a list
+DC-Dist-2>exit
+Invalid input -> exit
+Type ? for a list
+DC-Dist-2>enable
+No password has been assigned yet...
+DC-Dist-2#
+SYSLOG: <14> Mar 13 15:48:50 DC-Dist-2 Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+config t
+DC-Dist-2(config)#ip route 10.73.164.0/24 10.175.4.1
+DC-Dist-2(config)#ip route 10.175.0.0/24 10.175.4.1
+DC-Dist-2(config)#ip route 10.175.4.0/24 10.175.4.1
+DC-Dist-2(config)#no ip route 0.0.0.0/0 10.175.4.1
+DC-Dist-2(config)#exit
+DC-Dist-2#
+SYSLOG: <14> Mar 13 15:48:56 DC-Dist-2 Security: running-config was potentially changed by operator from console 
+end
+Invalid input -> end
+Type ? for a list
+DC-Dist-2#page
+Enable page display mode
+DC-Dist-2#

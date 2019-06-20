@@ -1,0 +1,42 @@
+
+
+Execution datetime: 20190620.073155 
+
+
+Trying 10.176.14.232...
+Connected to 10.176.14.232.
+Escape character is '^]'.
+
+
+
+CallCenter-Access-2#
+end
+exit
+
+exit
+enable
+skip
+copy run tftp 10.175.4.58 configs/cr490-june19/call-access2.conf
+
+CallCenter-Access-2#^C
+CallCenter-Access-2#
+CallCenter-Access-2#end
+Invalid input -> end
+Type ? for a list
+CallCenter-Access-2#exit
+CallCenter-Access-2>
+SYSLOG: <14> Jun 20 06:31:56 CallCenter-Access-2 Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+^C
+CallCenter-Access-2>
+CallCenter-Access-2>exit
+Invalid input -> exit
+Type ? for a list
+CallCenter-Access-2>enable
+No password has been assigned yet...
+CallCenter-Access-2#
+SYSLOG: <14> Jun 20 06:32:01 CallCenter-Access-2 Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+skip
+Disable page display mode
+CallCenter-Access-2#copy run tftp 10.175.4.58 configs/cr490-june19/call-access2.conf
+CallCenter-Access-2#.Upload running-config to TFTP server done.
+CallCenter-Access-2#

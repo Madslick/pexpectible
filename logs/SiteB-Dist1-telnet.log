@@ -1,0 +1,58 @@
+
+
+Execution datetime: 20190313.094820 
+
+
+Trying 10.176.14.232...
+Connected to 10.176.14.232.
+Escape character is '^]'.
+
+
+
+DC-Agg-2(config-vlan-4)#
+DC-Agg-2(config-vlan-4)#
+end
+exit
+skip
+exit
+enable
+config t
+ip route 10.73.164.0/24 10.175.4.1
+ip route 10.175.0.0/24 10.175.4.1
+ip route 10.175.4.0/24 10.175.4.1
+no ip route 0.0.0.0/0 10.175.4.1
+exit
+end
+page
+^C
+DC-Agg-2(config-vlan-4)#
+DC-Agg-2(config-vlan-4)#end
+DC-Agg-2#
+SYSLOG: <14> Mar 13 15:48:21 DC-Agg-2 Security: running-config was potentially changed by operator from console 
+exit
+DC-Agg-2>
+SYSLOG: <14> Mar 13 15:48:21 DC-Agg-2 Security: console logout by un-authenticated console user from PRIVILEGED EXEC mode 
+skip
+Invalid input -> skip
+Type ? for a list
+DC-Agg-2>exit
+Invalid input -> exit
+Type ? for a list
+DC-Agg-2>enable
+No password has been assigned yet...
+DC-Agg-2#
+SYSLOG: <14> Mar 13 15:48:26 DC-Agg-2 Security: console login by un-authenticated console user to PRIVILEGED EXEC mode 
+config t
+DC-Agg-2(config)#ip route 10.73.164.0/24 10.175.4.1
+DC-Agg-2(config)#ip route 10.175.0.0/24 10.175.4.1
+DC-Agg-2(config)#ip route 10.175.4.0/24 10.175.4.1
+DC-Agg-2(config)#no ip route 0.0.0.0/0 10.175.4.1
+DC-Agg-2(config)#exit
+DC-Agg-2#
+SYSLOG: <14> Mar 13 15:48:32 DC-Agg-2 Security: running-config was potentially changed by operator from console 
+end
+Invalid input -> end
+Type ? for a list
+DC-Agg-2#page
+Enable page display mode
+DC-Agg-2#
